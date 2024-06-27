@@ -1,5 +1,5 @@
 # FON BET SCANNER: Advanced Betting Alert System
-- Удобный парсер для отслеживания событий на динамическом сайте, с обходом обнаружения автоматизации, работой без окна и уведомлениями в реальном времени.
+- Удобный парсер для отслеживания событий на динамическом сайте, с обходом обнаружения автоматизации, работой без открытия окна и уведомлениями в реальном времени.
 
 [English](./README_en.md) | [Русский](./README.md)
 
@@ -19,12 +19,12 @@
 
 ## Применяемые технологии
 Скрипт выполнен с использованием следующих технологий и библиотек:
-> - **[Xvfb](https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml)**: виртуальный X-сервер, обеспечивающий работу headless-браузера
-> - **[fluxbox](https://fluxbox.org/)**: легковесный оконный менеджер для управления виртуальными окнами.
+> - **[xvfb](https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml)**: виртуальный X-сервер, обеспечивающий работу headless-браузера
+> - **[fluxbox](https://fluxbox.org/)**: оконный менеджер для управления виртуальными окнами.
 > - **[x11vnc](https://www.karlrunge.com/x11vnc/)**: VNC-сервер для удаленного управления виртуальными окнами.
-> - **[OpenCV](https://opencv.org/)**: библиотека для обработки изображений, используемая для работы со скриншотами.
+> - **[openCV](https://opencv.org/)**: библиотека для обработки изображений
 > - **[selenium + uc](https://www.selenium.dev/)**: средство для автоматизации веб-браузеров.
-> - **[beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/)**: библиотека для парсинга HTML и XML.
+> - **[postgreSQL](https://www.postgresql.org)**: система управления базами данных.
 > - **[requests](https://docs.python-requests.org/en/latest/)**: библиотека для HTTP-запросов.
 > - **[docker](https://www.docker.com/)**: платформа для разработки и доставки приложений в контейнерах.
 > - **[telebot](https://pypi.org/project/pyTelegramBotAPI/)**: библиотека для работы с API Telegram.
@@ -51,14 +51,14 @@
         - `cookies.json`: файл с куками для входа.
         - `main.py`: основной файл запуска скрипта.
         - `run_background.py`: скрипт для фонового выполнения задач.
-        - `utils_db.py`: вспомогательные функции для работы с базой данных.
-        - `utils_img.py`: вспомогательные функции для работы с изображениями.
-        - `utils_navigation.py`: вспомогательные функции для навигации по сайту.
-        - `utils_processsing.py`: вспомогательные функции для обработки данных.
-        - `utils_telegram.py`: вспомогательные функции для работы с Telegram.
+        - `utils_db.py`: функции для работы с базой данных.
+        - `utils_img.py`: функции для работы с изображениями.
+        - `utils_navigation.py`: функции для навигации по сайту.
+        - `utils_processsing.py`: функции для обработки данных.
+        - `utils_telegram.py`: функции для работы с Telegram.
     - `requirements.txt`: список зависимостей проекта.
       
-## Создайте файл .env для настройки переменных окружения:
+4 ## Создайте файл .env для настройки переменных окружения:
 ```dotenv 
 TELEGRAM_TOKEN=        # telegram_bot_token
 CHAT_ID=               # telegram_chat_id
@@ -69,14 +69,14 @@ SCORE=                 # начальный_счет
 ```
 
 
-## Начало работы
+ ## Начало работы
 - **Вам потребуется настроенный аккаунт [Telegram](https://core.telegram.org/bots) для получения уведомлений и [Docker](https://www.docker.com/) для запуска контейнера.**
 
 ```bash
 # Клонирование репозитория
 git clone https://github.com/YourGithubProfile/FON_BET_SCANNER.git
 ```
- **Откройте сценарий для активации Docker в Windows.**
+- **Windows. Откройте сценарий**
 ```bash
 # Windows. Откройте сценарий
 docker_activate.bat
