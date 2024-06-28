@@ -63,10 +63,10 @@
 # Файл .env
 TELEGRAM_TOKEN=        # telegram_bot_token
 CHAT_ID=               # telegram_chat_id
-MIN_BET=               # минимальная_ставка
+MIN_BET=               # минимальный_коэфициент_ставки
 GAME_MINUTES=          # время_игры
-MAX_BET=               # максимальная_ставка
-SCORE=                 # начальный_счет
+MAX_BET=               # максимальный_коэфициент_ставки
+SCORE=                 # счет_list_type
 ```
 - #### Cоздайте файл [cookies.json]() в папке mount:
 ```dotenv
