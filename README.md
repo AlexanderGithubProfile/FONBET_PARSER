@@ -58,8 +58,9 @@
         - `utils_telegram.py`: функции для работы с Telegram.
     - `requirements.txt`: список зависимостей проекта.
       
-## Создайте файл .env для настройки переменных окружения:
+- #### Создайте файл [.env]() для настройки переменных окружения:
 ```dotenv 
+# Файл .env
 TELEGRAM_TOKEN=        # telegram_bot_token
 CHAT_ID=               # telegram_chat_id
 MIN_BET=               # минимальная_ставка
@@ -67,8 +68,15 @@ GAME_MINUTES=          # время_игры
 MAX_BET=               # максимальная_ставка
 SCORE=                 # начальный_счет
 ```
-
-
+- #### Cоздайте файл [cookies.json]() в папке mount:
+```dotenv
+# Выполните ручной вход на сайт и выполните скрипт
+import time
+import json
+cookies = driver.get_cookies()
+with open('cookies.json', 'w') as file:
+    json.dump(cookies, file)
+```
  ## Начало работы
 - **Вам потребуется настроенный аккаунт [Telegram](https://core.telegram.org/bots) для получения уведомлений и [Docker](https://www.docker.com/) для запуска контейнера.**
 
