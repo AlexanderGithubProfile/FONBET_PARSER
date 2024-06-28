@@ -1,0 +1,46 @@
+services:
+###########################################
+  undetected-chromedriver:
+###########################################
+    build:
+      context: .
+      shm_size: 4gb
+
+    shm_size: 4gb
+    image: undetected-chromedriver
+    container_name: docker_chrome
+    command: python bot_telegram.py
+    entrypoint: /entrypoint.sh
+    volumes:
+      - ./mount:/opt/wd
+    ports:
+      - "5900:5900"
+    environment:
+      - VNC_PASSWORD=123456
+    networks:
+      - bet-network
+    depends_on:
+      - db
+
+###########################################
+  db:
+###########################################
+    image: postgres
+    container_name: docker_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    ports:
+      - "54322:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - bet-network
+
+volumes:
+  db_data:
+
+networks:
+  bet-network:
+    driver: bridge
