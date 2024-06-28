@@ -19,14 +19,14 @@
 
 ## Применяемые технологии
 Скрипт выполнен с использованием следующих технологий и библиотек:
-> - **[xvfb](https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml)**: виртуальный X-сервер, обеспечивающий работу headless-браузера
+> - **[xvfb](https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml)**: виртуальный X-сервер для headless-браузера
 > - **[fluxbox](https://fluxbox.org/)**: оконный менеджер для управления виртуальными окнами.
 > - **[x11vnc](https://www.karlrunge.com/x11vnc/)**: VNC-сервер для удаленного управления виртуальными окнами.
 > - **[openCV](https://opencv.org/)**: библиотека для обработки изображений
 > - **[selenium + uc](https://www.selenium.dev/)**: средство для автоматизации веб-браузеров.
 > - **[postgreSQL](https://www.postgresql.org)**: система управления базами данных.
 > - **[requests](https://docs.python-requests.org/en/latest/)**: библиотека для HTTP-запросов.
-> - **[docker](https://www.docker.com/)**: платформа для разработки и доставки приложений в контейнерах.
+> - **[docker](https://www.docker.com/)**: платформа контейнеризации приложений
 > - **[telebot](https://pypi.org/project/pyTelegramBotAPI/)**: библиотека для работы с API Telegram.
 > - **[pandas](https://pandas.pydata.org/)**: библиотека для работы с данными.
 > - **[time](https://docs.python.org/3/library/time.html)**: библиотека для работы с временем.
@@ -41,26 +41,26 @@
 
 1. **fon_bet_scanner**: основной каталог проекта и настройки приложения.
 
-    - `Dockerfile`: настройки Docker контейнера.
-    - `README.md`: файл с описанием проекта.
-    - `docker-compose.yml`: конфигурация для Docker Compose.
-    - `docker_activate.bat`: сценарий для активации Docker в Windows.
-    - `entrypoint.sh`: сценарий для запуска контейнера.
-    - `mount`: директория с основными скриптами и данными.
+    - `Dockerfile`: настройки Docker
+    - `README.md`: файл с описанием проекта
+    - `docker-compose.yml`: конфигурация для запуска
+    - `docker_activate.bat`: сценарий активации Docker в Windows
+    - `entrypoint.sh`: сценарий для запуска контейнера
+    - `mount`: директория с основными скриптами
         - `bot_telegram.py`: скрипт для взаимодействия с Telegram.
         - `cookies.json`: файл с куками для входа.
         - `main.py`: основной файл запуска скрипта.
-        - `run_background.py`: скрипт для фонового выполнения задач.
-        - `utils_db.py`: функции для работы с базой данных.
-        - `utils_img.py`: функции для работы с изображениями.
-        - `utils_navigation.py`: функции для навигации по сайту.
-        - `utils_processsing.py`: функции для обработки данных.
-        - `utils_telegram.py`: функции для работы с Telegram.
+        - `run_background.py`: скрипт для фонового выполнения задач
+        - `utils_db.py`: функции работы с базой данных
+        - `utils_img.py`: функции для работы с изображениями
+        - `utils_navigation.py`: функции навигации по сайту
+        - `utils_processsing.py`: функции обработки элементов сайта
+        - `utils_telegram.py`: функции работы с Telegram
     - `requirements.txt`: список зависимостей проекта.
       
-- #### Создайте файл [.env]() для настройки переменных окружения:
+- #### Создайте файл [.env]() в папке mount для настройки переменных окружения:
 ```dotenv 
-# Файл .env
+# Образец требуемого файла .env
 TELEGRAM_TOKEN=        # telegram_bot_token
 CHAT_ID=               # telegram_chat_id
 MIN_BET=               # минимальный_коэфициент_ставки
@@ -68,7 +68,7 @@ GAME_MINUTES=          # время_игры
 MAX_BET=               # максимальный_коэфициент_ставки
 SCORE=                 # счет_list_type
 ```
-- #### Cоздайте файл [cookies.json]() в папке mount:
+- #### Добавьте файл [cookies.json]() в папку mount:
 ```dotenv
 # Выполните ручной вход на сайт и выполните скрипт
 import time
