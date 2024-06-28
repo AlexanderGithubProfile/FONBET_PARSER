@@ -30,7 +30,6 @@
 > - **[telebot](https://pypi.org/project/pyTelegramBotAPI/)**: библиотека для работы с API Telegram.
 > - **[pandas](https://pandas.pydata.org/)**: библиотека для работы с данными.
 > - **[time](https://docs.python.org/3/library/time.html)**: библиотека для работы с временем.
-> - **[logging](https://docs.python.org/3/library/logging.html)**: библиотека для ведения логов.
 
 <p align="left">
    <img src="img/02_fon_bet_scanner_1.png" width="400">
