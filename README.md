@@ -83,10 +83,9 @@ with open('cookies.json', 'w') as file:
 ```bash
 # Клонирование репозитория
 git clone https://github.com/YourGithubProfile/FON_BET_SCANNER.git
-```
-- **Windows. Откройте сценарий**
-```bash
+
 # Windows. Откройте сценарий
 docker_activate.bat
 ```
+
 
