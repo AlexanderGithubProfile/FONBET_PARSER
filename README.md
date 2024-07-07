@@ -17,7 +17,7 @@
 > - блокировка рекламы - скрипт автоматически закрывает всплывающие окна и рекламу
 
 <p align="center">
-   <img src="assets/example.png" width="700">
+   <img src="assets/example.png" width="800">
 </p>
 
 ## Применяемые технологии
