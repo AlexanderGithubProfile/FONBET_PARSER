@@ -46,16 +46,16 @@
     - `docker_activate.bat`: сценарий активации Docker в Windows
     - `entrypoint.sh`: сценарий для запуска контейнера
     - `mount`: директория с основными скриптами
-        - `bot_telegram.py`: скрипт для взаимодействия с Telegram.
-        - `cookies.json`: файл с куками для входа.
-        - `main.py`: основной файл запуска скрипта.
+        - `bot_telegram.py`: скрипт для взаимодействия с Telegram
+        - `cookies.json`: файл с куками для входа
+        - `main.py`: основной файл запуска скрипта
         - `run_background.py`: скрипт для фонового выполнения задач
         - `utils_db.py`: функции работы с базой данных
         - `utils_img.py`: функции для работы с изображениями
         - `utils_navigation.py`: функции навигации по сайту
         - `utils_processsing.py`: функции обработки элементов сайта
         - `utils_telegram.py`: функции работы с Telegram
-    - `requirements.txt`: список зависимостей проекта.
+    - `requirements.txt`: список зависимостей проекта
       
 - #### Создайте файл [.env](https://www.google.com/search?client=opera-gx&q=.env&sourceid=opera&ie=UTF-8&oe=UTF-8) в папке mount для настройки переменных окружения:
 ```dotenv 
